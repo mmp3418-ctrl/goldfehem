@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="شركة الفحم الذهبي لإستيراد الفحم والمواد الخام - الجودة الفاخرة">
+  <meta name="theme-color" content="#000000">
+  <title>شركة الفحم الذهبي | لإستيراد الفحم والمواد الخام</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --black-void: #000000;
+      --black-rich: #050505;
+      --black-deep: #0a0a0a;
+      --black-card: #141414;
+      --black-surface: #1a1a1a;
+      --gold-primary: #d4af37;
+      --gold-bright: #f0c75e;
+      --gold-light: #f9e076;
+      --gold-dark: #b4942e;
+      --gold-gradient-1: linear-gradient(135deg, #bf953f, #fcf6b5, #b38728, #fbf5b7, #aa771c);
+      --gold-gradient-2: linear-gradient(90deg, #d4af37 0%, #f9e076 30%, #d4af37 60%, #b4942e 100%);
+      --gold-gradient-text: linear-gradient(135deg, #e5c158 0%, #ffffff 40%, #d4af37 70%, #f0c75e 100%);
+      --white-pure: #ffffff;
+      --white-off: #f8f8f8;
+      --gray-100: #e8e8e8;
+      --gray-200: #cccccc;
+      --gray-300: #b0b0b0;
+      --gray-400: #999999;
+      --gray-500: #888888;
+      --gray-600: #666666;
+      --gray-700: #444444;
+      --gray-800: #2a2a2a;
+      --gray-900: #1a1a1a;
+      --glass-bg: rgba(15, 15, 15, 0.55);
+      --glass-border: rgba(212, 175, 55, 0.18);
+      --glass-blur: blur(35px);
+      --shadow-gold-sm: 0 4px 18px rgba(212,175,55,0.18);
+      --shadow-gold-md: 0 12px 35px rgba(212,175,55,0.28);
+      --shadow-gold-lg: 0 22px 55px rgba(212,175,55,0.35);
+      --shadow-card: 0 8px 30px rgba(0,0,0,0.5);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 26px;
+      --radius-xl: 34px;
+      --radius-2xl: 44px;
+      --radius-full: 9999px;
+      --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      --transition-spring: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      --font-primary: 'Cairo', sans-serif;
+      --font-secondary: 'El Messiri', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--black-void);
+      color: var(--gray-200);
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black-void); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold-primary); }
+    ::selection { background: rgba(212, 175, 55, 0.35); color: var(--white-pure); }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .text-gradient-gold {
+      background: var(--gold-gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-center { text-align: center; }
+
+    /* ==================== Header ==================== */
+    .header {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1100px;
+      z-index: 10000;
+      background: rgba(8, 8, 8, 0.72);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-full);
+      padding: 12px 28px;
+      transition: var(--transition-smooth);
+    }
+    .header.scrolled {
+      background: rgba(0, 0, 0, 0.92);
+      border-color: rgba(212, 175, 55, 0.4);
+      box-shadow: var(--shadow-gold-lg);
+      top: 6px;
+      padding: 10px 28px;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    /* [تعديل الشعار] */
+    .logo-icon-box {
+      width: 48px;
+      height: 48px;
+      background: rgba(212, 175, 55, 0.06);
+      border: 2px solid var(--gold-primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-spring);
+    }
+    .logo-icon-box i { font-size: 1.5rem; color: var(--gold-primary); }
+    .logo-icon-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 13px;
+    }
+    .brand-name {
+      font-family: var(--font-secondary);
+      font-weight: 700;
+      font-size: 1.45rem;
+      background: linear-gradient(to right, #ffffff, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.3px;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+      list-style: none;
+    }
+    .nav-link {
+      color: var(--gray-300);
+      font-weight: 500;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 6px 2px;
+      transition: var(--transition-fast);
+      text-decoration: none;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-gradient-2);
+      border-radius: 2px;
+      transition: width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .nav-link:hover,
+    .nav-link.active { color: var(--white-pure); }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .hamburger-line {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--gold-primary);
+      margin: 5px 0;
+      border-radius: 3px;
+      transition: var(--transition-fast);
+    }
+    .hamburger-btn.active .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .hamburger-btn.active .hamburger-line:nth-child(2) { opacity: 0; }
+    .hamburger-btn.active .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+    /* ==================== Hero Section ==================== */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: radial-gradient(ellipse at 50% 35%, #1a1604 0%, #000000 70%);
+      overflow: hidden;
+      padding: 120px 0 60px;
+    }
+    .hero-glow-top {
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .hero-glow-bottom {
+      position: absolute;
+      bottom: 5%;
+      right: 15%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+    }
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      color: var(--gold-primary);
+      padding: 9px 22px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-content h1 {
+      font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1.8rem;
+      color: var(--white-pure);
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--gray-300);
+      max-width: 600px;
+      margin: 0 auto 2.8rem;
+      line-height: 1.9;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 38px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: var(--transition-spring);
+      text-decoration: none;
+      border: none;
+    }
+    .btn-gold {
+      background: var(--gold-gradient-1);
+      color: var(--black-void);
+      box-shadow: var(--shadow-gold-md);
+    }
+    .btn-gold:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-gold-lg);
+    }
+
+    /* ==================== Sections Common ==================== */
+    .section {
+      padding: 90px 0;
+      position: relative;
+    }
+    .section-dark {
+      background: var(--black-deep);
+    }
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 175, 55, 0.07);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      color: var(--gold-primary);
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(8px);
+    }
+    .section-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--white-pure);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .section-desc {
+      color: var(--gray-400);
+      max-width: 620px;
+      margin: 0 auto 2.8rem;
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    /* ==================== About ==================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .about-card {
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      padding: 2.8rem 2.2rem;
+      transition: var(--transition-smooth);
+      text-align: center;
+      box-shadow: var(--shadow-card);
+    }
+    .about-card:hover {
+      border-color: rgba(212,175,55,0.45);
+      box-shadow: var(--shadow-gold-md);
+      transform: translateY(-6px);
+    }
+    .about-icon-circle {
+      width: 65px;
+      height: 65px;
+      background: rgba(212,175,55,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.6rem;
+      font-size: 1.7rem;
+      color: var(--gold-primary);
+      transition: var(--transition-spring);
+    }
+    .about-card:hover .about-icon-circle {
+      background: rgba(212,175,55,0.18);
+      box-shadow: var(--shadow-gold-sm);
+      transform: scale(1.05);
+    }
+    .about-card h3 {
+      color: var(--gold-primary);
+      font-size: 1.35rem;
+      margin-bottom: 0.9rem;
+      font-weight: 700;
+    }
+    .about-card p {
+      color: var(--gray-300);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    /* ==================== Products ==================== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: var(--black-card);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--gray-800);
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-card);
+    }
+    .product-card:hover {
+      border-color: var(--gold-primary);
+      box-shadow: var(--shadow-gold-lg);
+      transform: translateY(-9px);
+    }
+    /* [تعديل صور المنتجات] */
+    .product-image {
+      width: 100%;
+      height: 300px;
+      background: var(--black-surface);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .product-card:hover .product-image img {
+      transform: scale(1.07);
+    }
+
+    /* ==================== Contact ==================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.8rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      background: var(--black-card);
+      border: 1px solid var(--gray-800);
+      border-radius: var(--radius-xl);
+      padding: 2.2rem 1.8rem;
+      text-align: center;
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-card);
+    }
+    .contact-card:hover {
+      border-color: var(--gold-primary);
+      box-shadow: var(--shadow-gold-md);
+      transform: translateY(-6px);
+    }
+    .contact-card i {
+      font-size: 2.6rem;
+      color: var(--gold-primary);
+      margin-bottom: 1.2rem;
+    }
+    .contact-card h4 {
+      color: var(--white-pure);
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
+    /* [تعديل روابط التواصل] */
+    .contact-link {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white-pure);
+      background: var(--black-surface);
+      padding: 11px 24px;
+      border-radius: var(--radius-full);
+      margin-top: 8px;
+      text-decoration: none;
+      transition: var(--transition-fast);
+      border: 1px solid var(--gray-700);
+    }
+    .contact-link:hover {
+      background: var(--gold-gradient-1);
+      color: var(--black-void);
+      border-color: transparent;
+    }
+
+    /* ==================== Footer ==================== */
+    .footer {
+      background: var(--black-rich);
+      border-top: 1px solid rgba(212,175,55,0.25);
+      padding: 45px 0 28px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 1.8rem 0;
+    }
+    .footer-links a {
+      color: var(--gray-500);
+      text-decoration: none;
+      transition: var(--transition-fast);
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      color: var(--gold-primary);
+    }
+    .footer-bottom {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      padding-top: 22px;
+      border-top: 1px solid var(--gray-900);
+    }
+
+    /* ==================== Back to Top ==================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--gold-gradient-1);
+      color: var(--black-void);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-fast);
+      border: none;
+      box-shadow: var(--shadow-gold-md);
+      font-size: 1.2rem;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      transform: scale(1.1);
+    }
+
+    /* ==================== Responsive ==================== */
+    @media (max-width: 1024px) {
+      .hero-content { padding: 0 10px; }
+    }
+    @media (max-width: 768px) {
+      .header { width: 95%; top: 8px; padding: 10px 18px; }
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.97);
+        backdrop-filter: blur(30px);
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--gold-primary);
+        gap: 1.5rem;
+      }
+      .nav-menu.active { display: flex; }
+      .hamburger-btn { display: block; }
+      .products-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .section { padding: 65px 0; }
+      .hero-section { padding: 100px 0 50px; }
+    }
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 2.3rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .btn { padding: 14px 28px; font-size: 0.95rem; }
+      .contact-grid { grid-template-columns: 1fr; max-width: 350px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== Header ==================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="logo-wrapper" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+       <div class="logo-icon-box" id="logoPlaceholder">
+  <img src="lo.jpeg" alt="شعار شركة الفحم الذهبي">
+</div>
+        <span class="brand-name">الفحم الذهبي</span>
+      </div>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="القائمة">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link">من نحن</a></li>
+          <li><a href="#products" class="nav-link">منتجاتنا</a></li>
+          <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== الصفحة الرئيسية ==================== -->
+    <section class="hero-section" id="home">
+      <div class="hero-glow-top"></div>
+      <div class="hero-glow-bottom"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="fas fa-star"></i> الجودة الذهبية</span>
+          <h1>شركة <span class="text-gradient-gold">الفحم الذهبي</span></h1>
+          <p class="hero-subtitle">لإستيراد الفحم والمواد الخام وفق أعلى معايير الجودة والنقاء. نلتزم بتقديم منتجات استثنائية تلبي احتياجات السوق الليبي.</p>
+          <a href="#contact" class="btn btn-gold"><i class="fas fa-phone-alt"></i> اتصل بنا</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== صفحة من نحن ==================== -->
+    <section class="section section-dark" id="about">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-info-circle"></i> من نحن</span>
+          <h2 class="section-title">شركة <span class="text-gradient-gold">الفحم الذهبي</span></h2>
+          <p class="section-desc">شركة ليبية رائدة في مجال إستيراد الفحم والمواد الخام، نجمع بين الخبرة والجودة لنكون الخيار الأول لعملائنا.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon-circle"><i class="fas fa-bullseye"></i></div>
+            <h3>رسالتنا</h3>
+            <p>توفير فحم طبيعي وصناعي عالي الأداء، صديق للبيئة، يضمن رضا العملاء واستدامة الموارد للأجيال القادمة.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon-circle"><i class="fas fa-eye"></i></div>
+            <h3>رؤيتنا</h3>
+            <p>أن نكون العلامة التجارية الأولى للفحم </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== صفحة منتجاتنا ==================== -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-boxes"></i> منتجاتنا</span>
+          <h2 class="section-title">تشكيلة <span class="text-gradient-gold">الفحم الفاخر</span></h2>
+          <p class="section-desc">نقدم باقة متنوعة من منتجات الفحم والمواد الخام عالية الجودة لتناسب جميع احتياجاتكم.</p>
+        </div>
+        <div class="products-grid">
+          <!-- [تعديل صور المنتجات] - غير src لكل صورة -->
+          <div class="product-card">
+            <div class="product-image" id="productImg1">
+              <img src="ig1.jpeg" alt="فحم طبيعي ذهبي" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-fire\' style=\'font-size:4.5rem;color:#444;\'></i>'">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image" id="productImg2">
+              <img src="ig2.jpeg" alt="فحم صناعي مضغوط" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-cubes\' style=\'font-size:4.5rem;color:#444;\'></i>'">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image" id="productImg3">
+              <img src="ig4.jpeg" alt="قوالب فحم ذهبية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-th-large\' style=\'font-size:4.5rem;color:#444;\'></i>'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== صفحة اتصل بنا ==================== -->
+    <section class="section section-dark" id="contact">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-headset"></i> تواصل معنا</span>
+          <h2 class="section-title">نحن في <span class="text-gradient-gold">خدمتكم</span></h2>
+          <p class="section-desc">يسعدنا الرد على استفساراتكم وطلباتكم عبر قنوات التواصل المتاحة.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <h4>واتساب</h4>
+            <!-- [تعديل رقم الواتساب] -->
+            <a href="https://wa.me/218925324141" target="_blank" class="contact-link" id="whatsappLink">
+              <i class="fab fa-whatsapp"></i> 0925324141
+            </a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <h4>هاتف</h4>
+            <!-- [تعديل رقم الهاتف] -->
+            <a href="tel:0915324141" class="contact-link" id="phoneLink">
+              <i class="fas fa-phone"></i> 0915324141
+            </a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>موقعنا</h4>
+            <!-- [تعديل رابط خرائط جوجل] -->
+            <a href="https://maps.app.goo.gl/5kLm74uw53c5NxtE8" target="_blank" class="contact-link" id="mapsLink">
+              <i class="fas fa-location-dot"></i> قصر بن غشير، ليبيا
+            </a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h4>البريد</h4>
+            <!-- [تعديل البريد الإلكتروني] -->
+            <a href="mailto:info@goldencoal.ly" class="contact-link" id="emailLink">
+              <i class="fas fa-paper-plane"></i> info@goldencoal.ly
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo-wrapper" style="justify-content:center; margin-bottom:1rem;">
+        <div class="logo-icon-box" style="width:44px;height:44px;">
+          <i class="fas fa-gem"></i>
+        </div>
+        <span class="brand-name" style="font-size:1.3rem;">الفحم الذهبي</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#products">منتجاتنا</a>
+        <a href="#contact">اتصل بنا</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span style="color:var(--gold-primary);">شركة الفحم الذهبي</span>. جميع الحقوق محفوظة. | صنع بفخر في ليبيا 🇱🇾</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    const header = document.getElementById('header');
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      header.classList.toggle('scrolled', scrollY > 60);
+      backToTopBtn.classList.toggle('visible', scrollY > 500);
+      updateActiveNavLink();
+    });
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    function updateActiveNavLink() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 160;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + section.offsetHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /*
+      ========== تعليمات تعديل الكود ==========
+      1. الشعار: استبدل innerHTML للعنصر logoPlaceholder بصورة:
+         document.getElementById('logoPlaceholder').innerHTML = '<img src="logo.png" alt="شعار">';
+      2. صور المنتجات (3 فقط): غير src داخل productImg1, productImg2, productImg3.
+      3. رقم الواتساب: غير href في whatsappLink.
+      4. رقم الهاتف: غير href في phoneLink.
+      5. رابط خرائط جوجل: غير href في mapsLink.
+      6. البريد الإلكتروني: غير href في emailLink.
+      7. النصوص: قابلة للتعديل مباشرة في HTML أعلاه.
+    */
+  </script>
+</body>
+</html>
